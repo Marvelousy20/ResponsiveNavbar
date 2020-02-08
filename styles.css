@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+nav{
+    background-color: darkslategrey;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    padding: 15px 25px;
+}
+
+ul li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+}
+
+li.logo{
+    font-size: 25px;
+}
+
+li.logo a:hover{
+    text-decoration: none;
+}
+
+.item.button.secondary{
+    border-bottom: 1px solid dimgray;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.toggle{
+    cursor: pointer;
+}
+
+.bars{
+    height: 2px;
+    width: 18px;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+}
+
+
+.bars::before,.bars::after{
+    height: 2px;
+    content: "" ;
+    width: 18px;
+    display: inline-block;
+    position: absolute;
+    background-color: #fff;
+}
+
+.bars::before{
+    top:5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+/*Mobile view*/
+.toggle{
+    order: 1;
+}
+
+.item.button{
+    order:2;
+}
+
+.item{
+    width: 100%;
+    order: 3;
+    text-align: center;
+    display: none ;
+}
+
+
+/* adds a class of active to the item class */
+.item.active{
+    display: block;
+}
+
+/*For tablet */
+@media screen and (min-width: 450px) {
+    .menu{
+        justify-content: center;
+    }
+
+    .logo{
+        flex: 1;
+    }
+
+    .item.button{
+        display: block;
+        width: auto;
+        order: 1;
+        background-color: teal;
+        border-radius: 80px;
+        padding: 7px 15px;
+        border: 1px solid #006d6d;
+    }
+
+    .item.button a:hover{
+        text-decoration: none;
+    }
+
+    .item.button.secondary{
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+    .button a:hover{
+        transition: .5s all;
+    }
+
+    .button:not(.secondary) a:hover {
+       color: #ddd; 
+    }
+
+    .item.button.secondary a:hover{
+        color: #ddd;
+    }
+}
+
+
+/*Desktop view*/
+
+@media all and (min-width: 768px) {
+    .item{
+        width: auto;
+        display: block;
+    }
+
+    .logo{
+        order: 0;
+    }
+
+    .item{
+        order: 1;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .menu{
+        padding-right: 30px;
+    }
+
+}
