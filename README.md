@@ -11,4 +11,6 @@ The aim of this project is to increase my knowledge of flexbox and responsive de
 -JQUERY
 
 ### WHAT I LEARNT
-I was able to achieve my aim and now have good command of flexbox and media queries. 
+I was able to achieve my aim and I now have a good command of flexbox and media queries. 
+
+
